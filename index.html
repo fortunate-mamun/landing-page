@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3m feed Ltd.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
+</head>
+
+<body>
+
+  <nav class="navbar" id="home-com">
+
+    <div>
+      <h1>3M <span>Feed Ltd.</span></h1>
+    </div>
+
+    <div class="ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="page-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#product">Products</a></li>
+      <li><a href="#chicks">Chicks</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <button type="submit" class="Order"><a href="#Contact">Order now</a></button>
+  <article id="about">
+    <section class="first-scetion" id="home-mob">
+      <div class="banner">
+        <h1>formulating Quality for Ultimate Growth</h1>
+
+        <p>
+          Your trusted partner in poultry farming. We produce premium grade nutrition feed and supply healthy high yield
+          day
+          old chicks to ensure your farm's success.
+        </p>
+        <p class="btn-explore"><a href="#product">Explore Products</a></p>
+      </div>
+
+    </section>
+    <section class="second-section">
+      <div>
+        <h1>Why choose 3M Feed?</h1>
+        <p>We combine advanced production technology with strict quality control.</p>
+      </div>
+    </section>
+
+    <section class="third-section">
+      <div class="img">
+        <img src="img/feed-ingredient.jpg" alt="">
+      </div>
+      <div>
+        <h3>Premium Ingredients</h3>
+        <p>Only the finest natural grains and essential minerals go into our feed mixes.</p>
+      </div>
+
+    </section>
+
+    <section class="fourth-section">
+      <div class="img">
+        <img src="img/balnce-pic.png" alt="">
+      </div>
+      <div>
+        <h3>Balanced Nutrition</h3>
+        <p>Scientifically optimized formulas designed for ideal FCR (Feed Conversion Ratio).</p>
+      </div>
+
+    </section>
+    <section class="fifth-section">
+      <div class="img">
+        <img src="img/chicks-pic.png" alt="">
+      </div>
+      <div>
+        <h3>Healthy Genetics</h3>
+        <p>Our premium chicks are sourced from healthy lineages, vaccinated, and highly active</p>
+      </div>
+    </section>
+  </article>
+
+
+  <article id="product">
+    <section class="container">
+      <div>
+        <h1>Our Premium Products</h1>
+        <p>Tailored nutrition and livestock options for farms of all scales</p>
+      </div>
+
+
+      <div class="div-container">
+
+        <div class="div-left">
+          <div class="photo">
+            <img src="img/feed.jpg" alt="">
+          </div>
+          <p class="type">Nutrition</p>
+          <div class="text">
+            <p>High-Quality Poultry Feed</p>
+            <p>Formulated perfectly to match the exact digestive and growth requirements of your birds</p>
+            <ul>
+              <li>Broiler Pre-Starter & Starter</li>
+              <li>Broiler Grower & Finisher Pellets</li>
+              <li>Layer Starter, Grower, and Layer Mash</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div id="chicks" class="div-right">
+          <div class="photo">
+            <img src="img/chicks-product.jpg" alt="">
+          </div>
+          <P class="type">Livestock</P>
+          <div class="text">
+            <p>All Kinds of Chicks</p>
+            <p>Healthy, active, and high survival rate Day-Old Chicks (DOCs) brought straight to your farm</p>
+            <ul>
+              <li>Premium Broiler Chicks </li>
+              <li>Commercial Layer Chicks</li>
+              <li>Sonali and Dual-Purpose Breeds</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+  <article id="Contact">
+    <section class="seventh-section">
+
+      <h3>Place Your Order</h3>
+      <form action="#" method="post">
+        <div class="form-container">
+
+          <div class="left-side">
+
+            <div class="form-group">
+              <label for="name"> Your Full Name</label>
+              <input type="text" id="name" required>
+
+            </div>
+
+            <div class="form-group">
+              <label for="Phone">Phone number</label>
+              <input type="tel" id="phone" placeholder="+880 ××××××××××" required>
+            </div>
+
+            <div class="form-group">
+              <label for="interest">what are you looking for</label>
+              <select id="interest">
+                <option value="feed">Poultry feed</option>
+                <option value="chicks">Day-old chicks</option>
+                <option value="both">Both Feed & Chicks</option>
+              </select>
+            </div>
+          </div>
+          <div class="message">
+
+            <label for="message">Order Details</label>
+            <textarea name="" id="message" rows="8" cols="30" placeholder="write"></textarea>
+
+          </div>
+
+        </div>
+        <button type="submit" class="btn-send">Send</button>
+      </form>
+    </section>
+
+
+  </article>
+  <section class="eighth-section">
+<a class="com" href="#home-com"><img src="img/top.png" alt=""></a>
+<a class="mob" href="#home-mob"><img src="img/top.png" alt=""></a>
+  
+  <div>
+      &copy; 3M Feed Ltd.
+    </div > 
+  </section>
+
+  <script>
+    const hamMenu = document.querySelector('.ham-menu');
+    const pageMenu = document.querySelector('.page-menu');
+
+    hamMenu.addEventListener('click', () => {
+      pageMenu.classList.toggle('active');
+    });
+    const menuLinks = document.querySelectorAll('.page-menu a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        pageMenu.classList.remove('active');
+      });
+    });
+
+const orderForm = document.querySelector('form');
+orderForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+Swal.fire({
+  title: 'Success!',
+  text:'Successfully Submitted.',
+  icon: 'Success',
+  timer:1200,
+  showConfirmButton:false,
+  width:'280px',
+  color:'#11ee3d'
+ 
+});
+  orderForm.reset();
+});
+
+  
+  </script>
+
+</body>
+
+</html>
